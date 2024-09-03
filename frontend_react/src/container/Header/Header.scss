@@ -194,3 +194,211 @@
     margin: 2rem 0;
   }
 }
+
+
+
+
+
+
+
+// Header.scss
+.header-section {
+  position: relative; /* This is crucial for positioning child elements absolutely within this section */
+  padding: 8rem;
+  background-color: #f0f0f0;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.header-content {
+  grid-column: span 8;
+  place-self: center;
+  text-align: center;
+
+  @media (min-width: 640px) {
+    text-align: left;
+    justify-self: start;
+  }
+}
+
+.header-title {
+  font-size: 2rem;
+  color: #5c38c0;
+  margin-bottom: 1rem;
+  font-weight: bold;
+
+  @media (min-width: 640px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 5rem;
+  }
+}
+
+.header-title-highlight {
+  background: linear-gradient(90deg, #6a029b, #5f9de4);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientWave 3s ease infinite;
+}
+
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.header-description {
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+  }
+}
+
+.header-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #9c20e4, #5351f5);
+  transition: background 0.3s;
+
+  &:hover {
+    background: #e60d05;
+  }
+}
+
+.secondary-button {
+  background: linear-gradient(135deg, #9c20e4, #5351f5);
+  transition: background 0.3s;
+
+  &:hover {
+    background: #e60d05;
+  }
+}
+
+.header-image-container {
+  grid-column: span 4;
+  place-self: center;
+  margin-top: 1rem;
+
+  @media (min-width: 640px) {
+    margin-top: 0;
+  }
+}
+
+.header-image-wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(to bottom right, #ffffff 0%, #cacaca 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 1024px) {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.header-image {
+  border-radius: 50%;
+}
+
+
+
+.header-section {
+  position: relative;
+  padding: 8rem;
+  background-color: #f0f0f0;
+
+  .app__social {
+    position: absolute;
+    bottom: 0.1rem; /* Adjust as needed */
+    left: 0.1rem;   /* Adjust as needed */
+    display: flex;
+    gap: 1rem;    /* Space between icons */
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem; /* Size of the icon container */
+      height: 2.5rem; /* Size of the icon container */
+      border-radius: 50%;
+      background-color: #ffffff; /* Background color of the icon container */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s;
+
+      &:hover {
+        background-color: #2315e4; /* Change color on hover */
+        transform: scale(1.1);    /* Slightly enlarge on hover */
+      }
+
+      svg {
+        font-size: 1.5rem; /* Size of the icons */
+        color: #333333;    /* Color of the icons */
+      }
+    }
+  }
+
+  .app__navigation {
+    position: absolute;
+    right: 0.1rem; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem; /* Space between dots */
+    
+    @media (max-width: 768px) { /* Tablets and smaller devices */
+      display: none;
+    }
+
+    @media (max-width: 480px) { /* Phones */
+      display: none;
+    }
+  }
+
+  .app__navigation-dot {
+    width: 10px; /* Adjust size */
+    height: 10px; /* Adjust size */
+    border-radius: 50%;
+    background-color: #cccccc; /* Default color */
+    transition: background-color 0.3s;
+  }
+}
+
+

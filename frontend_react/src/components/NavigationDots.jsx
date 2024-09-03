@@ -17,3 +17,4 @@ const NavigationDots = ({ active }) => (
 );
 
 export default NavigationDots;
+
