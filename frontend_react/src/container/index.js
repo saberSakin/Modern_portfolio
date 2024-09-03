@@ -5,6 +5,7 @@ import Skills from './Skills/Skills';
 import Testimonial from './Testimonial/Testimonial';
 import Work from './Work/Work';
 import AchievementsSection from './AchievementsSection/AchievementsSection';
+import AboutSection from './AboutSection/AboutSection';
 
 export {
   About,
@@ -14,4 +15,5 @@ export {
   Testimonial,
   Work,
   AchievementsSection,
+  AboutSection,
 };

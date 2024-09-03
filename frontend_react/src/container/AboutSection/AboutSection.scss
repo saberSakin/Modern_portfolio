@@ -1,0 +1,87 @@
+.about-section {
+    color: rgb(20, 20, 20);
+    padding: 2rem;
+  }
+  
+  .about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .about-image {
+    flex: 1;
+    max-width: 20rem;
+    height: auto;
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+  
+  .about-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .about-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 5rem;
+  }
+  
+  .tab-buttons {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 0.1rem;
+  }
+  
+  .tab-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: none; /* Ensure no border */
+    font-size: 1rem; /* Match font-size with about-description */
+    font-family: inherit; /* Inherit font-family from parent, if set */
+    font-weight: bold;
+    cursor: pointer; /* Indicate that it's clickable */
+    padding: 0.5rem; /* Add some padding for better click area */
+    text-transform: uppercase; /* Optional: Make text uppercase for consistency */
+  }
+  
+  .tab-indicator {
+    height: 0.25rem;
+    background-color: #4e03d8; /* Change to your primary color */
+    margin-top: 0.5rem;
+    width: 100%;
+    transition: width 0.3s ease; /* Smooth transition for the indicator */
+  }
+  
+  .tab-content {
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image {
+      max-width: 80%; /* Adjust for smaller screens */
+      margin: 0 auto;
+    }
+  
+    .about-description {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      margin-right: 0; /* Adjust margin-right for smaller screens */
+    }
+  }
+  
