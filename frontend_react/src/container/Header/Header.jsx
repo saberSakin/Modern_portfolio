@@ -75,23 +75,77 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import NavigationDots from '../../components/NavigationDots';
-import SocialMedia from '../../components/SocialMedia'; // Import SocialMedia
+import SocialMedia from '../../components/SocialMedia';
 import './Header.scss';
 import heroImage from '../../assets/profile.png';
+import AchievementsSection from '../AchievementsSection/AchievementsSection';
+
+// Define animation variants
+const headerVariants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const buttonsVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: 'easeOut',
+      delay: 0.2,
+    },
+  },
+};
+
+const achievementsVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: 'easeOut',
+      delay: 0.4,
+    },
+  },
+};
 
 const Header = () => {
   return (
     <section id="home" className="header-section">
       <div className="header-grid">
+        {/* Header Content */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          initial="hidden"
+          whileInView="visible"
+          variants={headerVariants}
+          viewport={{ once: false, amount: 0.2 }}
           className="header-content"
         >
           <h1 className="header-title">
             <span className="header-title-highlight">
-              Hello, I&apos;m{" Shakin"}
+              Hello, I&apos;m {"Shakin"}
             </span>
             <br />
             <TypeAnimation
@@ -111,7 +165,14 @@ const Header = () => {
           <p className="header-description">
             Turning concepts into digital reality, where code converges with creativity and functionality seamlessly blends with captivating elegance.
           </p>
-          <div className="header-buttons">
+          {/* Header Buttons */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={buttonsVariants}
+            viewport={{ once: false, amount: 0.2 }}
+            className="header-buttons"
+          >
             <a
               href="#contact"
               className="header-button primary-button"
@@ -126,12 +187,15 @@ const Header = () => {
             >
               Download CV
             </a>
-          </div>
+          </motion.div>
         </motion.div>
+
+        {/* Header Image */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          initial="hidden"
+          whileInView="visible"
+          variants={imageVariants}
+          viewport={{ once: false, amount: 0.2 }}
           className="header-image-container"
         >
           <div className="header-image-wrapper">
@@ -145,8 +209,20 @@ const Header = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Achievements Section */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={achievementsVariants}
+        viewport={{ once: false, amount: 0.2 }}
+        className="achievements-wrapper"
+      >
+        <AchievementsSection />
+      </motion.div>
+
       <NavigationDots active="home" />
-      <SocialMedia /> {/* Add SocialMedia component */}
+      <SocialMedia />
     </section>
   );
 };
