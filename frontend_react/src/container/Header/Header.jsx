@@ -71,160 +71,100 @@
 
 // export default AppWrap(Header, 'home');
 
+////////////////////////////////////////////////////////////////////////
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import NavigationDots from '../../components/NavigationDots';
-import SocialMedia from '../../components/SocialMedia';
+
 import './Header.scss';
 import heroImage from '../../assets/profile.png';
 import AchievementsSection from '../AchievementsSection/AchievementsSection';
+import { AppWrap } from '../../wrapper';
 
-// Define animation variants
-const headerVariants = {
-  hidden: { opacity: 0, y: -50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: 'easeOut',
-    },
-  },
-};
-
-const imageVariants = {
-  hidden: { opacity: 0, scale: 0.5 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.8,
-      ease: 'easeOut',
-    },
-  },
-};
-
-const buttonsVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: 'easeOut',
-      delay: 0.2,
-    },
-  },
-};
-
-const achievementsVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: 'easeOut',
-      delay: 0.4,
-    },
-  },
-};
-
-const Header = () => {
-  return (
-    <section id="home" className="header-section">
-      <div className="header-grid">
-        {/* Header Content */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          variants={headerVariants}
-          viewport={{ once: false, amount: 0.2 }}
-          className="header-content"
-        >
-          <h1 className="header-title">
-            <span className="header-title-highlight">
-              Hello, I&apos;m {"Shakin"}
-            </span>
-            <br />
-            <TypeAnimation
-              sequence={[
-                "Engineer",
-                1000,
-                "Programmer",
-                1000,
-                "Web Developer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
-          </h1>
-          <p className="header-description">
-            Turning concepts into digital reality, where code converges with creativity and functionality seamlessly blends with captivating elegance.
-          </p>
-          {/* Header Buttons */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={buttonsVariants}
-            viewport={{ once: false, amount: 0.2 }}
-            className="header-buttons"
-          >
-            <a
-              href="#contact"
-              className="header-button primary-button"
-            >
-              Hire Me
-            </a>
-            <a
-              href="https://drive.google.com/drive/folders/1GS9nS6_XqZxYiOgrSFf148_aTWywo9Iu?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="header-button secondary-button"
-            >
-              Download CV
-            </a>
-          </motion.div>
-        </motion.div>
-
-        {/* Header Image */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          variants={imageVariants}
-          viewport={{ once: false, amount: 0.2 }}
-          className="header-image-container"
-        >
-          <div className="header-image-wrapper">
-            <img
-              src={heroImage}
-              alt="hero"
-              className="header-image"
-              width={300}
-              height={300}
-            />
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Achievements Section */}
+const Header = () => (
+  <section id="home" className="header-section">
+    <div className="header-grid">
+      {/* Header Content */}
       <motion.div
-        initial="hidden"
-        whileInView="visible"
-        variants={achievementsVariants}
-        viewport={{ once: false, amount: 0.2 }}
-        className="achievements-wrapper"
+        whileInView={{ opacity: [0, 1], y: [-50, 0] }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="header-content"
       >
-        <AchievementsSection />
+        <h1 className="header-title">
+          <span className="header-title-highlight">
+            Hello, I&apos;m {"Shakin"}
+          </span>
+          <br />
+          <TypeAnimation
+            sequence={[
+              "Engineer",
+              1000,
+              "Programmer",
+              1000,
+              "Web Developer",
+              1000,
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+          />
+        </h1>
+        <p className="header-description">
+          Turning concepts into digital reality, where code converges with creativity and functionality seamlessly blends with captivating elegance.
+        </p>
+        {/* Header Buttons */}
+        <motion.div
+          whileInView={{ opacity: [0, 1], y: [50, 0] }}
+          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+          className="header-buttons"
+        >
+          <a
+            href="#contact"
+            className="header-button primary-button"
+          >
+            Hire Me
+          </a>
+          <a
+            href="https://drive.google.com/drive/folders/1GS9nS6_XqZxYiOgrSFf148_aTWywo9Iu?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="header-button secondary-button"
+          >
+            Download CV
+          </a>
+        </motion.div>
       </motion.div>
 
-      <NavigationDots active="home" />
-      <SocialMedia />
-    </section>
-  );
-};
+      {/* Header Image */}
+      <motion.div
+        whileInView={{ opacity: [0, 1], scale: [0.5, 1] }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="header-image-container"
+      >
+        <div className="header-image-wrapper">
+          <img
+            src={heroImage}
+            alt="hero"
+            className="header-image"
+            width={300}
+            height={300}
+          />
+        </div>
+      </motion.div>
+    </div>
 
-export default Header;
+    {/* Achievements Section */}
+    <motion.div
+      whileInView={{ opacity: [0, 1], y: [50, 0] }}
+      transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
+      className="achievements-wrapper"
+    >
+      <AchievementsSection />
+    </motion.div>
+
+  </section>
+);
+
+export default AppWrap(Header, 'home');

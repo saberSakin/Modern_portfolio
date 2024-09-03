@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import AnimatedNumbers from "react-animated-numbers";
 import "./AchievementsSection.scss";
-
 
 const achievementsList = [
   {
@@ -26,6 +25,14 @@ const achievementsList = [
 ];
 
 const AchievementsSection = () => {
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+    // Delay the start of numbers animation
+    const timer = setTimeout(() => setStartAnimation(true), 1000); // Adjust the delay as needed
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="achievements-section">
       <div className="achievements-container">
@@ -33,17 +40,19 @@ const AchievementsSection = () => {
           <div key={index} className="achievement-item">
             <h2 className="achievement-value">
               {achievement.prefix}
-              <AnimatedNumbers
-                includeComma
-                animateToNumber={parseInt(achievement.value, 10)}
-                locale="en-US"
-                className="animated-number"
-                configs={(_, index) => ({
-                  mass: 1,
-                  friction: 100,
-                  tension: 140 * (index + 1),
-                })}
-              />
+              {startAnimation && (
+                <AnimatedNumbers
+                  includeComma
+                  animateToNumber={parseInt(achievement.value, 10)}
+                  locale="en-US"
+                  className="animated-number"
+                  configs={(_, index) => ({
+                    mass: 1,
+                    friction: 100,
+                    tension: 80 * (index + 1),
+                  })}
+                />
+              )}
               {achievement.postfix}
             </h2>
             <p className="achievement-metric">{achievement.metric}</p>
@@ -55,4 +64,3 @@ const AchievementsSection = () => {
 };
 
 export default AchievementsSection;
-

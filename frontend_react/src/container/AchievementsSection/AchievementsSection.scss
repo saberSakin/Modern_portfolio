@@ -1,57 +1,76 @@
 .achievements-section {
-    padding: 2rem 1rem;
-  
+  padding: 1rem; // Reduced padding for mobile screens
+
+  @media (min-width: 640px) {
+    padding: 2rem; // Slightly larger padding for small screens and up
+  }
+
+  @media (min-width: 1280px) {
+    padding: 4rem; // Larger padding for large screens
+  }
+
+  .achievements-container {
+    border: 1px solid #3f3733;
+    border-radius: 0.375rem;
+    padding: 1rem; // Reduced padding for mobile screens
+    display: flex;
+    flex-direction: row; // Horizontal layout on all screens
+    flex-wrap: wrap; // Allow items to wrap if needed
+    align-items: center;
+    justify-content: center;
+
     @media (min-width: 640px) {
-      padding: 4rem 4rem;
+      padding: 2rem;
     }
-  
+
     @media (min-width: 1280px) {
-      padding: 4rem 4rem;
-    }
-  
-    .achievements-container {
-      border: 1px solid #3f3733;
-      border-radius: 0.375rem;
       padding: 2rem 4rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  
-      @media (min-width: 640px) {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-  
-    .achievement-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 1rem;
-  
-      @media (min-width: 640px) {
-        margin: 0 1rem;
-      }
-    }
-  
-    .achievement-value {
-      color: #3d1fc2;
-      font-size: 2.25rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-    }
-  
-    .achievement-metric {
-      color: #252627;
-      font-size: 1rem;
-    }
-  
-    .animated-number {
-      color: #3d1fc2;
-      font-size: 2.25rem;
-      font-weight: 700;
     }
   }
-  
+
+  .achievement-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem; // Reduced margin for mobile screens
+    min-width: 120px; // Ensure a minimum width for horizontal alignment
+    flex: 1 1 150px; // Allow items to grow and shrink
+
+    @media (min-width: 640px) {
+      margin: 0 1rem;
+      min-width: 150px; // Adjust base width for larger screens
+    }
+  }
+
+  .achievement-value {
+    color: #3d1fc2;
+    font-size: 1.25rem; // Smaller font size for mobile screens
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 640px) {
+      font-size: 1.75rem; // Larger font size for small screens and up
+    }
+  }
+
+  .achievement-metric {
+    color: #252627;
+    font-size: 0.875rem; // Smaller font size for mobile screens
+
+    @media (min-width: 640px) {
+      font-size: 1rem; // Larger font size for small screens and up
+    }
+  }
+
+  .animated-number {
+    color: #3d1fc2;
+    font-size: 1.25rem; // Smaller font size for mobile screens
+    font-weight: 700;
+
+    @media (min-width: 640px) {
+      font-size: 1.75rem; // Larger font size for small screens and up
+    }
+  }
+}

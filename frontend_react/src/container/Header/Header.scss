@@ -321,7 +321,7 @@
   position: relative;
   width: 250px;
   height: 250px;
-  background: linear-gradient(to bottom right, #ffffff 0%, #cacaca 100%);
+  background: linear-gradient(to bottom right, #ffffff8c 0%, #dddddd79 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -402,3 +402,12 @@
 }
 
 
+.header-image-container {
+  /* Default styles for the hero image container */
+  display: block; // or any other styles you have
+
+  // Media query to hide the hero image on small screens
+  @media (max-width: 768px) { // You can adjust the breakpoint as needed
+    display: none;
+  }
+}
