@@ -59,8 +59,17 @@ const TAB_DATA = [
     id: "publications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Student, working on different projects: web development, machine learning, and electronics.</li>
-        <li>Also working on research and publishing papers.</li>
+        <li>“Squeeze and Excitation Attention Meets Modified EfficientNetB0 Architecture: Multi-Class Brain Tumor 
+        Classification Using Explainable Artifical Intelligence” in ICCIT 2023.</li>
+        <li>“Enhanced Brain Tumor Classification using Squeeze and Excitation Attention-Guided Modified EfficientNetB2 
+        Architecture” in ICCIT 2023.</li>
+        <li>“Synergizing GAN and Customized Neural Network for Enhanced Brain Stroke Prediction: A Web-based 
+           Implementation” in ICAEEE 2024. 
+        </li>
+        <li>
+        “Enhanced Knee Osteoarthritis Classification using a Modified EfficientNetB5 Architecture with Self-Attention 
+        Mechanism” in ICAEEE 2024.
+        </li>
       </ul>
     ),
   },
@@ -83,7 +92,7 @@ const AboutSection = () => {
         <div className="about-content">
           <h2 className="about-title">About Me</h2>
           <p className="about-description">
-            Hey there, I'm Shakin, an Electronics and Telecommunication Engineering student at RUET, Bangladesh. I'm a tech enthusiast about Programming, Machine Learning, Electronics, Full-stack Web Development, and Graphics Design.
+            Hey there, I'm Shakin, an Electronics and Telecommunication Engineering student at RUET, Bangladesh. I'm a tech enthusiast about Programming, Machine Learning, Electronics, Full-stack Web Development.
           </p>
           <div className="tab-buttons">
             <TabButton
