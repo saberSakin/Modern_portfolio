@@ -74,17 +74,114 @@
 ////////////////////////////////////////////////////////////////////////
 
 
+// import React from 'react';
+// import { motion } from 'framer-motion';
+// import { TypeAnimation } from 'react-type-animation';
+
+// import './Header.scss';
+// import heroImage from '../../assets/profile.png';
+// import AchievementsSection from '../AchievementsSection/AchievementsSection';
+// import { AppWrap } from '../../wrapper';
+
+// const Header = () => (
+//   <section id="home" className="header-section">
+//     <div className="header-grid">
+//       {/* Header Content */}
+//       <motion.div
+//         whileInView={{ opacity: [0, 1], y: [-50, 0] }}
+//         transition={{ duration: 0.8, ease: 'easeOut' }}
+//         className="header-content"
+//       >
+//         <h1 className="header-title">
+//           <span className="header-title-highlight">
+//             Hello, I&apos;m {"Shakin"}
+//           </span>
+//           <br />
+//           <TypeAnimation
+//             sequence={[
+//               "Engineer",
+//               1000,
+//               "Programmer",
+//               1000,
+//               "Web Developer",
+//               1000,
+//             ]}
+//             wrapper="span"
+//             speed={50}
+//             repeat={Infinity}
+//           />
+//         </h1>
+//         <p className="header-description">
+//           Turning concepts into digital reality, where code converges with creativity and functionality seamlessly blends with captivating elegance.
+//         </p>
+//         {/* Header Buttons */}
+//         <motion.div
+//           whileInView={{ opacity: [0, 1], y: [50, 0] }}
+//           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+//           className="header-buttons"
+//         >
+//           <a
+//             href="#contact"
+//             className="header-button primary-button"
+//           >
+//             Hire Me
+//           </a>
+//           <a
+//             href="https://drive.google.com/drive/folders/1GS9nS6_XqZxYiOgrSFf148_aTWywo9Iu?usp=sharing"
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="header-button secondary-button"
+//           >
+//             Download CV
+//           </a>
+//         </motion.div>
+//       </motion.div>
+
+//       {/* Header Image */}
+//       <motion.div
+//         whileInView={{ opacity: [0, 1], scale: [0.5, 1] }}
+//         transition={{ duration: 0.8, ease: 'easeOut' }}
+//         className="header-image-container"
+//       >
+//         <div className="header-image-wrapper">
+//           <img
+//             src={heroImage}
+//             alt="hero"
+//             className="header-image"
+//             width={300}
+//             height={300}
+//           />
+//         </div>
+//       </motion.div>
+//     </div>
+
+//     {/* Achievements Section */}
+//     <motion.div
+//       whileInView={{ opacity: [0, 1], y: [50, 0] }}
+//       transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
+//       className="achievements-wrapper"
+//     >
+//       <AchievementsSection />
+//     </motion.div>
+
+//   </section>
+// );
+
+// export default AppWrap(Header, 'home');
+
+//////////////////////////////////////////////////////
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-
 import './Header.scss';
 import heroImage from '../../assets/profile.png';
 import AchievementsSection from '../AchievementsSection/AchievementsSection';
 import { AppWrap } from '../../wrapper';
+import ParticlesContainer from '../ParticlesContainer/ParticlesContainer'; // Import the ParticlesContainer
 
 const Header = () => (
   <section id="home" className="header-section">
+    <ParticlesContainer /> {/* Add Particles here */}
     <div className="header-grid">
       {/* Header Content */}
       <motion.div
@@ -163,7 +260,6 @@ const Header = () => (
     >
       <AchievementsSection />
     </motion.div>
-
   </section>
 );
 

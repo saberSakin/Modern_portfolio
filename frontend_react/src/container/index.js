@@ -6,6 +6,7 @@ import Testimonial from './Testimonial/Testimonial';
 import Work from './Work/Work';
 import AchievementsSection from './AchievementsSection/AchievementsSection';
 import AboutSection from './AboutSection/AboutSection';
+import ParticlesContainer from './ParticlesContainer/ParticlesContainer';
 
 export {
   About,
@@ -16,4 +17,5 @@ export {
   Work,
   AchievementsSection,
   AboutSection,
+  ParticlesContainer,
 };
