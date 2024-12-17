@@ -33,7 +33,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Department of ETE, RUET, Bangladesh, 2019-Present</li>
+        <li>Graduated from Department of Electronics and Telecommunication Engineering, RUET, Bangladesh, 2024</li>
         <li>Graduated from Kushtia Govt. College, Bangladesh, 2018</li>
         <li>Graduated from Kushtia Zilla School, Bangladesh, 2016</li>
       </ul>
