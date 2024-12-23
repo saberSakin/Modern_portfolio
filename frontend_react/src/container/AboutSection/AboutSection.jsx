@@ -64,11 +64,11 @@ const TAB_DATA = [
         <li>“Enhanced Brain Tumor Classification using Squeeze and Excitation Attention-Guided Modified EfficientNetB2 
         Architecture” in ICCIT 2023.</li>
         <li>“Synergizing GAN and Customized Neural Network for Enhanced Brain Stroke Prediction: A Web-based 
-           Implementation” in ICAEEE 2024. 
+           Implementation” in ICCIT 2024. 
         </li>
         <li>
         “Enhanced Knee Osteoarthritis Classification using a Modified EfficientNetB5 Architecture with Self-Attention 
-        Mechanism” in ICAEEE 2024.
+        Mechanism” in ICCIT 2024.
         </li>
       </ul>
     ),
