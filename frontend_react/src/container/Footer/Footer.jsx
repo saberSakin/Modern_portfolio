@@ -85,7 +85,8 @@
 //   'app__whitebg',
 // );
 
-//////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 import React, { useState } from 'react';
 
 import { images } from '../../constants';
@@ -164,12 +165,12 @@ const Footer = () => {
         </div>
       )}
 
-      {/* Hit counter */}
-      <div className="hit-counter">
+      {/* Hit counter badge */}
+      <div className="hit-counter" style={{ marginTop: '40px', paddingBottom: '20px', textAlign: 'center' }}>
         <a href="https://hits.seeyoufarm.com">
-          <img 
-            src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgjbae1212%2Fhit-counter&count_bg=%234E26C9&title_bg=%23353535&icon=&icon_color=%23E7E7E7&title=Protfolio+Views&edge_flat=false" 
-            alt="Hit Counter"
+          <img
+            src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fsabersakin.vercel.app&count_bg=%234E26C9&title_bg=%23353535&icon=&icon_color=%23E7E7E7&title=Protfolio+Views&edge_flat=false"
+            alt="Hits"
           />
         </a>
       </div>
