@@ -92,7 +92,7 @@ const AboutSection = () => {
         <div className="about-content">
           <h2 className="about-title">About Me</h2>
           <p className="about-description">
-            Hey there, I'm Shakin, an Electronics and Telecommunication Engineering student at RUET, Bangladesh. I'm a tech enthusiast about Programming, Machine Learning, Electronics, Full-stack Web Development.
+          Hey, I'm Shakin, a tech enthusiast and Electronics and Telecommunication Engineering graduate from RUET, Bangladesh. My interests span across Programming, Machine Learning, Electronics, and Full-stack Web Development.
           </p>
           <div className="tab-buttons">
             <TabButton
